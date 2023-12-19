@@ -1,12 +1,29 @@
 console.log("JS OK")
 
-// step 1: dichiaro variabili e richiedo valore all'utente tramite prompt
+//! step 2: dichiaro le variabili ricavate dagli elementi in pagina
 
-const percorrenzaKm = parseInt(prompt("Quanti chilometri hai intenzione di percorrere?", 150.11));
-const etaPasseggero = parseInt(prompt("Qual è la sua età?", 17));
+const kms = document.getElementById("form-km");
+const age = document.getElementById("select-age");
+const button = document.getElementById("submit-info");
 
-console.log("percorrenza Km ", percorrenzaKm, "età passeggero ", etaPasseggero);
+console.log("percorrenza Km ", kms, "età passeggero ", age);
 
+//! step 3: attivo il bottone per la ricezione dell'input
+
+button.addEventListener("click", function() {
+
+    // recupero l'input
+    const percorrenzaKm = parseInt (kms.value);
+    const etaPasseggero = parseInt (age.value);
+
+    console.log("percorrenza Km", percorrenzaKm, "età passeggero", etaPasseggero);
+})
+
+
+
+
+
+/*
 // Step 2: creo formula per calcolare prezzo intero del biglietto
 
 const tariffaKm = 0.21;
@@ -17,11 +34,11 @@ console.log("Tariffa base ", prezzoBase);
     let errorMessage;
 
     //controllo input
-    if ( percorrenzaKm < 5 || percorrenzaKm > 5000 ) {
-        errorMessage = "Inserisci un valore di kilometraggio ammesso (min.5, max.5000 km)"
+    if ( percorrenzaKm < 5 || percorrenzaKm > 5000 || percorrenzaKm isNaN) {
+        errorMessage = "Inserisci un valore di kilometraggio ammesso (min.5, max.5000 km)."
     }
     
-    if (etaPasseggero < 1 || etaPasseggero > 99) {
+    if (etaPasseggero < 1 || etaPasseggero > 99 || etaPasseggero isNaN) {
         errorMessage += " Inserisci un valore età valido 1-99"
     }
 
@@ -53,3 +70,5 @@ console.log("Tariffa base ", prezzoBase);
 
         }
     }
+
+    */
