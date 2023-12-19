@@ -31,41 +31,51 @@
 
 <body>
     
-    <main>
+    <main class="container-fluid py-5">
 
-        <section class="card">
-            <h1>CALCOLA LA TUA TARIFFA</h1>
-            <div class="">
-                <label for="form-name" class="form-label">Nome e Cognome</label>
-                <input type="text" class="form-control" id="form-name">
+        <section id="calc-fare">
+            <div class="card m-4 row">
+
+                <h1>CALCOLA LA TUA TARIFFA</h1>
+                <div class="col-8">
+                    <label for="form-name" class="form-label">Nome e Cognome</label>
+                    <input type="text" class="form-control" id="form-name">
+                </div>
+
+                <div class="col-8">
+                    <label for="form-km" class="form-label">Km da percorrere</label>
+                    <input type="number" class="form-control" id="form-km">
+                </div>
+
+                <div class="col-8">
+                    <label for="select-age" class="form-label">Età</label>
+                    <!-- <input type="number" class="form-control" id="select-age"> -->
+                    <select class="d-block" id="select-age" >
+                        <option selected value="adult">Adulto (18+ anni)</option>
+                        <option value="young"> Giovane (< 18 anni) </option>
+                        <option value="over"> Anziano (65+ anni) </option>
+                    </select> 
+                </div>    
+                <div class="col-4">
+                    <button class="m-5" id="submit-info">Calcola Tariffa</button>
+                </div>
             </div>
-
-            <div class="">
-                <label for="form-km" class="form-label">Km da percorrere</label>
-                <input type="number" class="form-control" id="form-km">
-            </div>
-
-            <label for="select-age" class="form-label">Età</label>
-            <!-- <input type="number" class="form-control" id="select-age"> -->
-            <select class="d-block" id="select-age" >
-                <option selected value="adult">Adulto (18+ anni)</option>
-                <option value="young"> Giovane (< 18 anni) </option>
-                <option value="over"> Anziano (65+ anni) </option>
-            </select>
-            
         </section>
-        <button class="m-5" id="submit-info">Calcola Tariffa</button>
+
         <section id="your-ticket" class="">
 
-            <h1>IL TUO BIGLIETTO</h1>
-            <div class="card mb-3">
-                <div class="row">
+            <div class="card m-4 p-4">
+                <h1>IL TUO BIGLIETTO</h1>
+                <div class="row row-cols-1 row-cols-md-2">
 
-                    <div class="col-4 m-4">
-                        <img src="./img/qr_code_barcode.jpg" class="img-fluid rounded-start" alt="qr-ticket">
+                    <div class="col">
+                        <div id="qr-code">
+                            <img src="./img/qr_code_barcode.jpg" class="img-fluid rounded-start" alt="qr-ticket">
+                            <div class="text-danger">Inquadra il QR code per validare</div>
+                        </div>
                     </div>
-
-                    <div class="col-6">
+                    
+                    <div class="col">
                         <div class="card-body">
                             <h4>Passeggero: <span id="name-result"></span></h4>
                             <div class="card-text">Tariffa: <span id="age-result"></span></div>

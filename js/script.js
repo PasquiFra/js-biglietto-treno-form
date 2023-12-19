@@ -21,7 +21,7 @@ button.addEventListener("click", function() {
     console.log("percorrenza Km", percorrenzaKm, "età passeggero", etaPasseggero);
     
     //controllo input
-    if ( percorrenzaKm < 5 || percorrenzaKm > 5000 || isNaN(percorrenzaKm)) {
+    if ( percorrenzaKm < 5 || percorrenzaKm > 5000 ) {
         alert ("Inserisci un valore di kilometraggio ammesso (min.5, max.5000 km).");
         return;
     }

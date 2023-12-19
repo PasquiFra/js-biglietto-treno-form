@@ -1,0 +1,18 @@
+#qr-code {
+    border: 2px dashed red;
+    padding: 20px;
+    height: 400px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#calc-fare .card {
+    justify-content: center;
+}
+
+main {
+    background-color: #b91450;
+}
