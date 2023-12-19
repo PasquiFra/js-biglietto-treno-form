@@ -33,7 +33,8 @@
     
     <main>
 
-        <section class="form">
+        <section class="card">
+            <h1>CALCOLA LA TUA TARIFFA</h1>
             <div class="">
                 <label for="form-name" class="form-label">Nome e Cognome</label>
                 <input type="text" class="form-control" id="form-name">
@@ -45,30 +46,34 @@
             </div>
 
             <label for="select-age" class="form-label">Età</label>
-            <input type="number" class="form-control" id="select-age">
-            <!-- <select class="d-block" id="select-age" >
+            <!-- <input type="number" class="form-control" id="select-age"> -->
+            <select class="d-block" id="select-age" >
                 <option selected value="adult">Adulto (18+ anni)</option>
                 <option value="young"> Giovane (< 18 anni) </option>
                 <option value="over"> Anziano (65+ anni) </option>
-            </select> -->
+            </select>
             
-            <button id="submit-info">Calcola Tariffa</button>
         </section>
-        <section id="your-ticket" class="d-none">
+        <button class="m-5" id="submit-info">Calcola Tariffa</button>
+        <section id="your-ticket" class="">
 
             <h1>IL TUO BIGLIETTO</h1>
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
+            <div class="card mb-3">
+                <div class="row">
 
-                    <div class="col-md-4">
+                    <div class="col-4 m-4">
                         <img src="./img/qr_code_barcode.jpg" class="img-fluid rounded-start" alt="qr-ticket">
                     </div>
 
-                    <div class="col-md-8">
+                    <div class="col-6">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                            <h4>Passeggero: <span id="name-result"></span></h4>
+                            <div class="card-text">Tariffa: <span id="age-result"></span></div>
+                            <div class="card-text">Carrozza: <span id="carriage-result"></span></div>
+                            <div class="card-text">Treno # <span id="train-result"></span></div>
+                            <div class="card-text">Prezzo Biglietto: <span id="price-result"></span></div>
+                            
+                            <div class="card-text">ID Biglietto: <span id="id-ticket"></span></div>
                         </div>
                     </div>
                 </div>

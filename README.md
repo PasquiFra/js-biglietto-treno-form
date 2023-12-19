@@ -34,6 +34,8 @@ Se non vi sentite particolarmente creativi, vi forniamo uno screenshot da seguir
 
 ------------ **ESECUZIONE** ------------
 
+# MILESTONE 1
+
 1. creo due form e un bottone 
 
 2. dichiaro le variabili ricavate dagli elementi in pagina
@@ -42,3 +44,10 @@ Se non vi sentite particolarmente creativi, vi forniamo uno screenshot da seguir
 
 4. applico formula di calcolo sconti con validazione
 
+# MILESTONE 2
+
+1. Imposto gli output in pagina 
+    - dichiaro le variabili
+    - inserisco il risultato nell'innerHtml
+
+2. Lavoro sull'estetica della pagina html
