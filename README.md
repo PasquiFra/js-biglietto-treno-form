@@ -34,4 +34,11 @@ Se non vi sentite particolarmente creativi, vi forniamo uno screenshot da seguir
 
 ------------ **ESECUZIONE** ------------
 
+1. creo due form e un bottone 
+
+2. dichiaro le variabili ricavate dagli elementi in pagina
+
+3. attivo il bottone per la ricezione dell'input
+
+4. applico formula di calcolo sconti con validazione
 

@@ -13,34 +13,42 @@ console.log("percorrenza Km ", kms, "età passeggero ", age);
 button.addEventListener("click", function() {
 
     // recupero l'input
-    const percorrenzaKm = parseInt (kms.value);
-    const etaPasseggero = parseInt (age.value);
+    const percorrenzaKm = parseInt (kms.value.trim());
+    const etaPasseggero = parseInt (age.value.trim());
 
     console.log("percorrenza Km", percorrenzaKm, "età passeggero", etaPasseggero);
+    
+    //controllo input
+    if ( percorrenzaKm < 5 || percorrenzaKm > 5000 || percorrenzaKm, isNaN) {
+        alert ("Inserisci un valore di kilometraggio ammesso (min.5, max.5000 km).");
+        return;
+    }
+    
+    if (etaPasseggero < 1 || etaPasseggero > 99 || etaPasseggero, isNaN) {
+        alert (" Inserisci un valore età valido 1-99");
+        return;
+    }
+
+    else {
+        const tariffaKm = 0.21;
+        const prezzoBase = percorrenzaKm * tariffaKm;
+        
+        console.log("Tariffa base ", prezzoBase);
+
+    }
 })
 
 
-
-
-
 /*
+    //! step 4: applico formula di calcolo sconti con validazione
+   
+    
+    
+
+
 // Step 2: creo formula per calcolare prezzo intero del biglietto
 
-const tariffaKm = 0.21;
-const prezzoBase = percorrenzaKm * tariffaKm;
 
-console.log("Tariffa base ", prezzoBase);
-
-    let errorMessage;
-
-    //controllo input
-    if ( percorrenzaKm < 5 || percorrenzaKm > 5000 || percorrenzaKm isNaN) {
-        errorMessage = "Inserisci un valore di kilometraggio ammesso (min.5, max.5000 km)."
-    }
-    
-    if (etaPasseggero < 1 || etaPasseggero > 99 || etaPasseggero isNaN) {
-        errorMessage += " Inserisci un valore età valido 1-99"
-    }
 
     //Formula calcolo sconto
 
