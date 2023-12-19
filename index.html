@@ -33,26 +33,49 @@
     
     <main>
 
-        <div class="">
-            <label for="form-name" class="form-label">Nome e Cognome</label>
-            <input type="text" class="form-control" id="form-name">
-        </div>
+        <section class="form">
+            <div class="">
+                <label for="form-name" class="form-label">Nome e Cognome</label>
+                <input type="text" class="form-control" id="form-name">
+            </div>
 
-        <div class="">
-            <label for="form-km" class="form-label">Km da percorrere</label>
-            <input type="number" class="form-control" id="form-km">
-        </div>
+            <div class="">
+                <label for="form-km" class="form-label">Km da percorrere</label>
+                <input type="number" class="form-control" id="form-km">
+            </div>
 
-        <label for="select-age" class="form-label">Età</label>
-        <input type="number" class="form-control" id="select-age">
-        <!-- <select class="d-block" id="select-age" >
-            <option selected value="adult">Adulto (18+ anni)</option>
-            <option value="young"> Giovane (< 18 anni) </option>
-            <option value="over"> Anziano (65+ anni) </option>
-        </select> -->
-        
-        <button id="submit-info">Calcola Tariffa</button>
+            <label for="select-age" class="form-label">Età</label>
+            <input type="number" class="form-control" id="select-age">
+            <!-- <select class="d-block" id="select-age" >
+                <option selected value="adult">Adulto (18+ anni)</option>
+                <option value="young"> Giovane (< 18 anni) </option>
+                <option value="over"> Anziano (65+ anni) </option>
+            </select> -->
+            
+            <button id="submit-info">Calcola Tariffa</button>
+        </section>
+        <section id="your-ticket" class="d-none">
 
+            <h1>IL TUO BIGLIETTO</h1>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+
+                    <div class="col-md-4">
+                        <img src="./img/qr_code_barcode.jpg" class="img-fluid rounded-start" alt="qr-ticket">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+
+        </section>
     </main>
 
 
