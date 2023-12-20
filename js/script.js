@@ -5,7 +5,7 @@ console.log("JS OK")
 const fname = document.getElementById("form-name".trim()).value;
 const kms = document.getElementById("form-km").value;
 const age = document.getElementById("select-age").value;
-const button = document.getElementById("submit-info");
+const buttonGenerate = document.getElementById("submit-info");
 
 console.log("nome cliente ", fname, "| percorrenza Km ", kms, "| età passeggero ", age);
 
@@ -29,7 +29,7 @@ const alertDanger = document.querySelector(".alert-danger");
 
 //! step 3: attivo il bottone per la ricezione dell'input
 
-button.addEventListener("click", function() {
+buttonGenerate.addEventListener("click", function() {
     
     //! controllo input
     if ( percorrenzaKm < 5 || percorrenzaKm > 5000 || isNaN(kms)) {
@@ -119,5 +119,7 @@ button.addEventListener("click", function() {
     
     trainResult.innerHTML = `IT ${trainId}`;
 
+    //disabilito bottone creazione biglietto
+    buttonGenerate.classList.add("disabled")
 })    
 
