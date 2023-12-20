@@ -30,21 +30,33 @@
     </head>
 
 <body>
+
+    <header>
+
+        <img class="title-img" src="./img/Senza titolo.jpg" alt="title">
+
+    </header>
+
     
-    <main class="container-fluid py-5">
+    <main class="container-fluid py-3">
 
         <section id="calc-fare">
-            <div class="card m-4 row">
+            <div class="card m-4 p-4 row">
+                <div class="col-12">
+                    <h1>CALCOLA LA TUA TARIFFA</h1>
+                    <div class="alert alert-danger d-none" role="alert">
+                        A simple danger alert—check it out!
+                    </div>
+                </div>
 
-                <h1>CALCOLA LA TUA TARIFFA</h1>
                 <div class="col-8">
                     <label for="form-name" class="form-label">Nome e Cognome</label>
-                    <input type="text" class="form-control" id="form-name">
+                    <input type="text" class="form-control" id="form-name" value="Francesco Pasquinoni">
                 </div>
 
                 <div class="col-8">
                     <label for="form-km" class="form-label">Km da percorrere</label>
-                    <input type="number" class="form-control" id="form-km">
+                    <input type="number" class="form-control" id="form-km" value="100">
                 </div>
 
                 <div class="col-8">
@@ -52,32 +64,33 @@
                     <!-- <input type="number" class="form-control" id="select-age"> -->
                     <select class="d-block" id="select-age" >
                         <option selected value="adult">Adulto (18+ anni)</option>
-                        <option value="young"> Giovane (< 18 anni) </option>
+                        <option value="young"> Giovane (+ 18 anni) </option>
                         <option value="over"> Anziano (65+ anni) </option>
                     </select> 
                 </div>    
-                <div class="col-4">
-                    <button class="m-5" id="submit-info">Calcola Tariffa</button>
+                <div class="col-12 p-3 buttons">
+                    <button class="btn d-inline" id="submit-info">Calcola Tariffa</button>
+                    <button class="btn d-inline" id="reset-info">Annulla</button>
                 </div>
             </div>
         </section>
 
-        <section id="your-ticket" class="">
+        <section id="your-ticket" class="d-none">
 
             <div class="card m-4 p-4">
                 <h1>IL TUO BIGLIETTO</h1>
-                <div class="row row-cols-1 row-cols-md-2">
+                <div class="row justify-content-center">
 
-                    <div class="col">
+                    <div class="col-8 col-xl-4 flex-grow-0">
                         <div id="qr-code">
                             <img src="./img/qr_code_barcode.jpg" class="img-fluid rounded-start" alt="qr-ticket">
-                            <div class="text-danger">Inquadra il QR code per validare</div>
+                            <div class="text-danger text-center">Inquadra il QR code per validare</div>
                         </div>
                     </div>
                     
-                    <div class="col">
+                    <div class="col-12 col-xl-8 px-3">
                         <div class="card-body">
-                            <h4>Passeggero: <span id="name-result"></span></h4>
+                            <h4>Passeggero: <span id="name-result" class="ps-2"></span></h4>
                             <div class="card-text">Tariffa: <span id="age-result"></span></div>
                             <div class="card-text">Carrozza: <span id="carriage-result"></span></div>
                             <div class="card-text">Treno # <span id="train-result"></span></div>

@@ -1,3 +1,21 @@
+body {
+    background-color: #b91450;
+}
+
+header {
+    height: 100px;
+    background-color: white;
+}
+
+.title-img {
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 #qr-code {
     border: 2px dashed red;
     padding: 20px;
@@ -5,14 +23,26 @@
     width: 400px;
 }
 
-h1 {
-    text-align: center;
-}
-
 #calc-fare .card {
     justify-content: center;
 }
 
-main {
+button#submit-info  {
     background-color: #b91450;
+    color: white;
+    width: 150px;
+}
+
+button#reset-info  {
+    background-color: gray;
+    color: white;
+    width: 150px;
+}
+
+.card-text {
+    padding: 15px 0;
+}
+
+#name-result {
+    font-size: 2rem;
 }
